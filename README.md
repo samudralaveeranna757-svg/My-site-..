@@ -1,62 +1,123 @@
-#include <stdio.h>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Competitive Exam Application</title>
 
-int main()
-{
-    FILE *fp;
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
 
-    fp = fopen("application.html", "w");
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
 
-    if (fp == NULL)
-    {
-        printf("Unable to create website.\n");
-        return 1;
-    }
+        h1 {
+            text-align: center;
+            color: #1a4d8f;
+        }
 
-    fprintf(fp,
-        "<!DOCTYPE html>\n"
-        "<html>\n"
-        "<head>\n"
-        "<title>Student Application</title>\n"
-        "</head>\n"
-        "<body>\n"
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
 
-        "<h1>Student Application Form</h1>\n"
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
 
-        "<form>\n"
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #1a4d8f;
+            color: white;
+            border: none;
+            font-size: 17px;
+            border-radius: 5px;
+        }
 
-        "Name:<br>\n"
-        "<input type='text' name='name'><br><br>\n"
+        button:hover {
+            background: #12345f;
+        }
+    </style>
+</head>
 
-        "Class:<br>\n"
-        "<input type='text' name='class'><br><br>\n"
+<body>
 
-        "Date of Birth:<br>\n"
-        "<input type='date' name='dob'><br><br>\n"
+<div class="container">
 
-        "School Name:<br>\n"
-        "<input type='text' name='school'><br><br>\n"
+    <h1>Competitive Exam Application</h1>
 
-        "Mandal:<br>\n"
-        "<input type='text' name='mandal'><br><br>\n"
+    <form>
 
-        "Medium:<br>\n"
-        "<select name='medium'>\n"
-        "<option>Telugu</option>\n"
-        "<option>English</option>\n"
-        "<option>Urdu</option>\n"
-        "</select><br><br>\n"
+        <label>Candidate Name</label>
+        <input type="text" placeholder="Enter your name" required>
 
-        "<input type='submit' value='Submit'>\n"
+        <label>Father's Name</label>
+        <input type="text" placeholder="Enter father's name" required>
 
-        "</form>\n"
-        "</body>\n"
-        "</html>\n"
-    );
+        <label>Date of Birth</label>
+        <input type="date" required>
 
-    fclose(fp);
+        <label>Gender</label>
+        <select>
+            <option>Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
 
-    printf("Website created successfully!\n");
-    printf("Open application.html in Chrome.\n");
+        <label>Mobile Number</label>
+        <input type="tel" placeholder="Enter mobile number" required>
 
-    return 0;
-}
+        <label>School / College Name</label>
+        <input type="text" placeholder="Enter school or college name">
+
+        <label>Mandal</label>
+        <input type="text" placeholder="Enter mandal">
+
+        <label>District</label>
+        <input type="text" placeholder="Enter district">
+
+        <label>Medium</label>
+        <select>
+            <option>Select Medium</option>
+            <option>English</option>
+            <option>Telugu</option>
+            <option>Hindi</option>
+        </select>
+
+        <label>Competitive Exam</label>
+        <select>
+            <option>Select Exam</option>
+            <option>JEE</option>
+            <option>NEET</option>
+            <option>POLYCET</option>
+            <option>ECET</option>
+            <option>SSC</option>
+            <option>Other</option>
+        </select>
+
+        <label>Address</label>
+        <textarea rows="4" placeholder="Enter your address"></textarea>
+
+        <button type="submit">Submit Application</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
